@@ -16,7 +16,7 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: dragon-txt-file
-            path: dragon.txt
+            path: ./dragon.txt
         
     test-JOB-2:
         runs-on: ubuntu-latest
@@ -39,7 +39,7 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: dragon-txt-file
-            
+
         - name: Read File
           run: cat dragon.txt
 

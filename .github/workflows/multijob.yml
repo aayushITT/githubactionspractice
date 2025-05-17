@@ -8,12 +8,15 @@ jobs:
         steps:
         - name: Update apt cache
           run: sudo apt-get update
-          
+
         - name: Install cowsay
           run: sudo apt-get install cowsay -y
 
         - name: Execute cowsay Program
           run: cowsay -f dragon "Run for cover , i am a Dragon.....RAWR" >> dragon.txt
+
+        - name: Checkout repository
+          uses: actions/checkout@v3
 
         - name: upload the dragon text file
           uses: actions/upload-artifact@v3

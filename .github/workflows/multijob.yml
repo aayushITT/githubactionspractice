@@ -15,8 +15,8 @@ jobs:
         - name: Execute cowsay Program
           run: cowsay -f dragon "Run for cover , i am a Dragon.....RAWR" >> dragon.txt
 
-        - name: Checkout repository
-          uses: actions/checkout@v4
+        # - name: Checkout repository
+        #   uses: actions/checkout@v4
 
         - name: upload the dragon text file
           uses: actions/upload-artifact@v4
